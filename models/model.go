@@ -31,3 +31,23 @@ type GetContractArgument struct {
 type GetContractResponse struct {
 	HashDoc string `json:"hash_doc"`
 }
+
+type SignContractArgument struct {
+	Url        string `json:"url"`
+	PrivateKey string `json:"private_key"`
+}
+
+type KeyPair struct {
+	PublicKey  string `json:"public_key"`
+	PrivateKey string `json:"private_key"`
+}
+
+type SignatureResponse struct {
+	Signature string `json:"signature"`
+}
+
+type VerifyContractArgument struct {
+	Url       string `json:"url"`
+	Signature string `json:"signature"`
+	PublicKey string `json:"public_key"`
+}

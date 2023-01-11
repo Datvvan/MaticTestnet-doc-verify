@@ -46,8 +46,6 @@ func GetAccountAuth(client *ethclient.Client, accountAddress string, data []byte
 	}
 	tokenAddress := common.HexToAddress("0x7f4a627a135cb185f61e00deb24c213c394be0ff")
 
-	log.Println(gasPrice)
-
 	estimatedGas, err := client.EstimateGas(context.Background(), ethereum.CallMsg{
 		From: fromAddress,
 		To:   &tokenAddress,

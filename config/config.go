@@ -17,7 +17,6 @@ func ConnectClient() *ethclient.Client {
 		log.Fatal(err)
 	}
 	Client = client
-	log.Printf("%s", client)
 	return Client
 }
 
